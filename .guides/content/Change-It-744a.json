@@ -1,0 +1,32 @@
+{
+	"id": "744a31fa-6d4a-4501-adc9-ebb88b817243",
+	"title": "Change It",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": "tryit.py",
+			"panel": 1,
+			"action": "open"
+		},
+		{
+			"path": "#preview: https://{{domain3050}}/",
+			"panel": 2,
+			"action": "open"
+		},
+		{
+			"path": "#terminal: ",
+			"panel": 3,
+			"action": "open"
+		}
+	],
+	"path": [],
+	"contentType": "markdown",
+	"type": "page",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": "",
+	"layout": "4-cell-guides-left"
+}

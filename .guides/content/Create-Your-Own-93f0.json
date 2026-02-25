@@ -1,0 +1,32 @@
+{
+	"id": "93f04318-c6c3-4361-a0fc-6c893af6b3cf",
+	"title": "Create Your Own",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		},
+		{
+			"path": "tryit.py",
+			"panel": 1,
+			"action": "open"
+		},
+		{
+			"path": "#preview: https://{{domain3050}}/",
+			"panel": 2,
+			"action": "open"
+		},
+		{
+			"path": "#terminal: ",
+			"panel": 3,
+			"action": "open"
+		}
+	],
+	"path": [],
+	"contentType": "markdown",
+	"type": "page",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": "",
+	"layout": "4-cell-guides-left"
+}

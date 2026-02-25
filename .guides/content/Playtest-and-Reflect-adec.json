@@ -1,0 +1,17 @@
+{
+	"id": "adecd4e1-4c8e-4980-ad5e-98e205298ccb",
+	"title": "Playtest and Reflect",
+	"files": [
+		{
+			"path": "#tabs",
+			"action": "close"
+		}
+	],
+	"path": [],
+	"contentType": "markdown",
+	"type": "page",
+	"teacherOnly": false,
+	"closeTerminalSession": true,
+	"learningObjectives": "",
+	"layout": "1-panel-tree"
+}

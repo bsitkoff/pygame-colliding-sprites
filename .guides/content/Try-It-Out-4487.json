@@ -7,7 +7,7 @@
 			"action": "close"
 		},
 		{
-			"path": "tryit.py",
+			"path": "collide.py",
 			"panel": 1,
 			"action": "open"
 		},

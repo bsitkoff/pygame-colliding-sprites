@@ -4,70 +4,33 @@ import random
 WIDTH = 800
 HEIGHT = 600
 
-class Player:
-    def __init__(self, x, y):
-        self.image = "happy"
-        self.x = x
-        self.y = y
-        self.width = 40
-        self.height = 40
+player = Actor('happy')
+player.pos = (WIDTH // 2, HEIGHT // 2)
 
-class Enemy:
-    def __init__(self, x, y):
-        self.image = "alien"
-        self.x = x
-        self.y = y
-        self.width = 40
-        self.height = 40
-
-class Collectible:
-    def __init__(self, x, y):
-        self.image = "cookie"
-        self.x = x
-        self.y = y
-        self.width = 30
-        self.height = 30
-
-player = Player(WIDTH // 2, HEIGHT // 2)
-enemy = Enemy(100, 100)
-cookie = Collectible(300, 300)
+alien = Actor('alien')
+alien.pos = (100, 100)
 
 def update():
-    # Move enemy toward player
-    if player.x > enemy.x:
-        enemy.x += 1
-    elif player.x < enemy.x:
-        enemy.x -= 1
-    
-    if player.y > enemy.y:
-        enemy.y += 1
-    elif player.y < enemy.y:
-        enemy.y -= 1
+    if keyboard.left:
+        player.x -= 4
+    if keyboard.right:
+        player.x += 4
+    if keyboard.up:
+        player.y -= 4
+    if keyboard.down:
+        player.y += 4
+
+    # Keep player on screen
+    player.x = max(0, min(WIDTH, player.x))
+    player.y = max(0, min(HEIGHT, player.y))
+
+    # TODO: make alien chase the player
+
+    # TODO: check if player collides with alien (player.colliderect(alien))
 
 def draw():
-    screen.clear((0, 0, 0))
-    screen.blit(player.image, (player.x, player.y))
-    screen.blit(enemy.image, (enemy.x, enemy.y))
-    screen.blit(cookie.image, (cookie.x, cookie.y))
-
-def on_key_down(key):
-    if key == keys.UP:
-        player.y -= 10
-    elif key == keys.DOWN:
-        player.y += 10
-    elif key == keys.LEFT:
-        player.x -= 10
-    elif key == keys.RIGHT:
-        player.x += 10
-    
-    # Wrap around screen
-    if player.x < 0:
-        player.x = WIDTH
-    elif player.x > WIDTH:
-        player.x = 0
-    if player.y < 0:
-        player.y = HEIGHT
-    elif player.y > HEIGHT:
-        player.y = 0
+    screen.fill((0, 0, 0))
+    player.draw()
+    alien.draw()
 
 pgzrun.go()

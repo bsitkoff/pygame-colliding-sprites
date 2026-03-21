@@ -1,0 +1,32 @@
+{
+	"type": "free-text-auto",
+	"taskId": "free-text-auto-2718324773",
+	"source": {
+		"name": "predict",
+		"showName": false,
+		"instructions": "What do you think happens when this runs?",
+		"command": "python3 .guides/secure/freetext.py --question '**What do you think happens when this runs? (if player.colliderect(alien) block)** ' --use-llm",
+		"timeoutSeconds": 40,
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Free Text Autograde"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"arePartialPointsAllowed": false,
+		"previewType": "NONE",
+		"points": 1,
+		"useMaximumScore": false
+	}
+}

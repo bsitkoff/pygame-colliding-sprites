@@ -1,5 +1,4 @@
 import pgzrun
-import random
 
 WIDTH = 800
 HEIGHT = 600
@@ -8,10 +7,9 @@ player = Actor('happy')
 player.pos = (WIDTH // 2, HEIGHT // 2)
 
 alien = Actor('alien')
-alien.pos = (100, 100)
+alien.pos = (200, 150)
 
 def update():
-    # Player movement
     if keyboard.left:
         player.x -= 5
     if keyboard.right:
@@ -21,22 +19,24 @@ def update():
     if keyboard.down:
         player.y += 5
 
-    # Keep player on screen
-    player.x = max(0, min(WIDTH, player.x))
-    player.y = max(0, min(HEIGHT, player.y))
+    # Alien chases the player
+    if alien.x < player.x:
+        alien.x += 1
+    elif alien.x > player.x:
+        alien.x -= 1
 
-    # TODO: make the alien chase the player
+    if alien.y < player.y:
+        alien.y += 1
+    elif alien.y > player.y:
+        alien.y -= 1
 
-    # Check collision with alien
     if player.colliderect(alien):
         print("Hit!")
         exit()
-
 
 def draw():
     screen.fill((0, 0, 0))
     player.draw()
     alien.draw()
-
 
 pgzrun.go()

@@ -5,15 +5,15 @@ Swap with a neighbor and play each other's games.
 **Give feedback on:**
 - Is it clear what you're supposed to do?
 - Does the collision feel right — fair? Too easy? Too hard?
-- What would make it more satisfying?
+- What would make it more fun?
 
 ---
+Make at least one change based on your playtest feedback.
 
 **Reflect on your own work:**
 
-What was the trickiest part of getting `colliderect()` to work the way you wanted?
+{Check It!|assessment}(free-text-auto-2396586280)
 
-> *[TODO: insert free-text-auto or free-text assessment — reflection question]*
 
 ---
 

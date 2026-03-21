@@ -1,0 +1,32 @@
+{
+	"type": "free-text-auto",
+	"taskId": "free-text-auto-2396586280",
+	"source": {
+		"name": "changes",
+		"showName": false,
+		"instructions": "How did you change your game based on feedback?",
+		"command": "python3 .guides/secure/freetext.py --question 'How did you change your game based on feedback?' --use-llm",
+		"timeoutSeconds": 40,
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Free Text Autograde"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"arePartialPointsAllowed": false,
+		"previewType": "NONE",
+		"points": 1,
+		"useMaximumScore": false
+	}
+}

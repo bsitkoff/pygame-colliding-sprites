@@ -1,21 +1,33 @@
 ## Change It
 
-> 📹 **Watch:** Making a Sprite Chase — Math Lite
-> *Record in Screencastify — show the if/elif pattern for moving toward a target*
-> *Objective: I can write code that moves one sprite toward another.*
-> **[ADD VIDEO URL WHEN RECORDED]**
+### 📹 **Watch:** Making a Sprite Chase — How it works
 
-> 📹 **Watch:** Making a Sprite Chase — Math-y Version *(optional)*
-> *Record in Screencastify — same result using subtraction and sign; for students who want the math explanation*
-> **[ADD VIDEO URL WHEN RECORDED]**
-
+<iframe width="720" height="600"
+  src="https://app.screencastify.com/watch/SQfsCE4x3IiG7AsAvQuC/embed"
+  title="Codio - Colliding Sprites-1 - Screencastify - March 21, 2026 3:17 PM"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+  
 ---
 
-Don't worry — you can't break anything permanently!
+### 📹 **Watch:** Making a Sprite Chase — but with more math *(optional)*
+
+<iframe width="720" height="600"
+  src="https://app.screencastify.com/watch/oe6W3v40edFPb9Dgltar/embed"
+  title="Codio - Colliding Sprites-1 - Screencastify - March 21, 2026 3:23 PM"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+  
 
 ## 1: Make the Collision Actually Do Something
 
-Right now a collision prints "Hit!" and exits. That's not very satisfying. Change the `if player.colliderect(alien):` block to do something else — try moving the alien to a random position instead.
+Right now a collision prints `"Hit!"` and exits. That's not very exciting. Change the `if player.colliderect(alien):` block to do something else — try moving the alien to a random position instead.
 
 ```python
 import random
@@ -41,5 +53,5 @@ Do the same for `y`. Run the game — can you outrun the alien?
 Add a `cookie = Actor('cookie')` and make something happen when the player collides with it (move it to a new random spot, for starters).
 
 ---
+{Check It!|assessment}(free-text-auto-616170812)
 
-> *[TODO: insert free-text-auto assessment — "What changes did you make? Describe what your game does now."]*

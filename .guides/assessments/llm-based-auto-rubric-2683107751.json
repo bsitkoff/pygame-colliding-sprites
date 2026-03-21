@@ -1,0 +1,80 @@
+{
+	"type": "llm-based-auto-rubric",
+	"taskId": "llm-based-auto-rubric-2683107751",
+	"source": {
+		"name": "chase game",
+		"showName": false,
+		"instructions": "Test your code by running python3 tryit.py first.  Then, check your code against the requirements here.",
+		"metadata": {
+			"tags": [],
+			"files": [
+				"tryit.py"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 1,
+					"content": "tryit.py"
+				},
+				{
+					"type": "preview",
+					"panelNumber": 0,
+					"content": "https://{{domain3050}}/"
+				},
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"points": 5,
+		"arePartialPointsAllowed": true,
+		"rubrics": [
+			{
+				"id": "1",
+				"title": "Player Movement with Keyboard",
+				"description": "The game includes a player sprite that can be controlled using keyboard input. The player should respond to key presses (such as arrow keys or WASD) to move around the screen in a smooth and predictable manner. The movement should be functional and allow the player to navigate the game area effectively.",
+				"points": 1
+			},
+			{
+				"id": "2",
+				"title": "Enemy Movement Toward Player",
+				"description": "The game contains at least one enemy sprite that actively moves toward the player's position. The enemy should demonstrate intelligent movement behavior by tracking the player's location and adjusting its movement direction accordingly. The enemy movement should be visible and create a sense of challenge or pursuit in the game.",
+				"points": 1
+			},
+			{
+				"id": "3",
+				"title": "Collectible with Random Repositioning",
+				"description": "The game includes at least one collectible item that, when collected by the player, moves to a new random position on the screen. The collectible should be clearly distinguishable from other sprites and should properly relocate to different coordinates when the collision occurs, creating an ongoing objective for the player.",
+				"points": 1
+			},
+			{
+				"id": "4",
+				"title": "Collision Response System",
+				"description": "The game properly detects when sprites overlap and responds appropriately to these collision events. This includes implementing collision detection between the player and enemies, player and collectibles, or other sprite interactions. When collisions occur, the game should execute specific behaviors such as score changes, sprite repositioning, game state changes, or other meaningful responses.",
+				"points": 1
+			},
+			{
+				"id": "5",
+				"title": "Unique Sprite Graphics",
+				"description": "The game uses distinct and unique sprite images for different game elements (player, enemies, collectibles). Each sprite type should be visually distinguishable from others, using either custom images or appropriately chosen graphics that clearly represent their role in the game. Sprites should be properly sized and formatted for the game environment.",
+				"points": 1
+			}
+		],
+		"rubricsRequirements": "1. Has a **player** that moves with the keyboard\n2. Has **at least one enemy** that moves toward the player\n3. Has **at least one collectible** that moves to a new random position when collected\n4. **Responds to collisions** — something happens when sprites overlap\n5. Uses **unique sprites**",
+		"solutions": [
+			{
+				"path": ".guides/secure/createyourown.py",
+				"content": "import pgzrun\nimport random\n\nWIDTH = 800\nHEIGHT = 600\n\nscore = 0\nalien_speed = 1\n\nplayer = Actor('knight')\nplayer.pos = (WIDTH // 2, HEIGHT // 2)\n\nalien = Actor('dragon')\nalien.pos = (random.randint(0, WIDTH), random.randint(0, HEIGHT))\n\ncookie = Actor('gem')\ncookie.pos = (random.randint(0, WIDTH), random.randint(0, HEIGHT))\n\n\ndef update():\n    global score, alien_speed\n\n    # Player movement\n    if keyboard.left:\n        player.x -= 5\n    if keyboard.right:\n        player.x += 5\n    if keyboard.up:\n        player.y -= 5\n    if keyboard.down:\n        player.y += 5\n\n    # Keep player on screen\n    player.x = max(0, min(WIDTH, player.x))\n    player.y = max(0, min(HEIGHT, player.y))\n\n    # Alien chases the player\n    if player.x > alien.x:\n        alien.x += alien_speed\n    elif player.x < alien.x:\n        alien.x -= alien_speed\n    if player.y > alien.y:\n        alien.y += alien_speed\n    elif player.y < alien.y:\n        alien.y -= alien_speed\n\n    # Collision with cookie — move to new random position\n    if player.colliderect(cookie):\n        score += 1\n        cookie.pos = (random.randint(50, WIDTH - 50), random.randint(50, HEIGHT - 50))\n        alien_speed += 0.5\n        print(\"Score: \" + str(score))\n\n    # Collision with alien — game over\n    if player.colliderect(alien):\n        print(\"Game Over! Final Score: \" + str(score))\n        exit()\n\n\ndef draw():\n    screen.fill((0, 0, 0))\n    player.draw()\n    alien.draw()\n    cookie.draw()\n    screen.draw.text(\"Score: \" + str(score), topleft=(10, 10), fontsize=30)\n\n\npgzrun.go()\n"
+			}
+		]
+	}
+}

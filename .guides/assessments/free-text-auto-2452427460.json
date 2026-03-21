@@ -1,0 +1,50 @@
+{
+	"type": "free-text-auto",
+	"taskId": "free-text-auto-2452427460",
+	"source": {
+		"name": "hits",
+		"showName": false,
+		"instructions": "In this game, collide.py (not the video), what happens when the two sprites overlap?",
+		"command": "python3 .guides/secure/freetext.py --question 'In this game, collide.py (not the video), what happens when the two sprites overlap?' --use-llm",
+		"timeoutSeconds": 40,
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Free Text Autograde"
+				}
+			],
+			"files": [
+				"collide.py"
+			],
+			"opened": [
+				{
+					"type": "file",
+					"panelNumber": 1,
+					"content": "collide.py"
+				},
+				{
+					"type": "preview",
+					"panelNumber": 0,
+					"content": "https://{{domain3050}}/"
+				},
+				{
+					"type": "terminal",
+					"panelNumber": 1,
+					"content": ""
+				}
+			]
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"arePartialPointsAllowed": false,
+		"previewType": "NONE",
+		"points": 1,
+		"useMaximumScore": false
+	}
+}

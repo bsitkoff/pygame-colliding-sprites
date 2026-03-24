@@ -1,0 +1,32 @@
+{
+	"type": "free-text-auto",
+	"taskId": "free-text-auto-883018576",
+	"source": {
+		"name": "Video reflection",
+		"showName": false,
+		"instructions": "Pick one idea from the video and describe how it connects to your game — or how you could use it to make your game better.",
+		"command": "python3 .guides/secure/freetext.py --question '**Pick one idea from the video and describe how it connects to your game — or how you could use it to make your game better.** ' --use-llm",
+		"timeoutSeconds": 40,
+		"metadata": {
+			"tags": [
+				{
+					"name": "Assessment Type",
+					"value": "Free Text Autograde"
+				}
+			],
+			"files": [],
+			"opened": []
+		},
+		"bloomsObjectiveLevel": "",
+		"learningObjectives": "",
+		"guidance": "",
+		"showGuidanceAfterResponseOption": {
+			"type": "Never"
+		},
+		"maxAttemptsCount": 0,
+		"arePartialPointsAllowed": false,
+		"previewType": "NONE",
+		"points": 1,
+		"useMaximumScore": false
+	}
+}

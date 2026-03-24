@@ -89,7 +89,7 @@ Pages follow this sequence:
 ## Working with This Repo
 
 - **Don't delete files** without confirming with Bridget
-- **Don't modify assessment JSON** files directly — assessments are configured in the Codio GUI
+- **Don't create assessment JSON** files directly — new assessments must be created in the Codio GUI. Modifying existing assessment JSON is fine.
 - **Don't create index.json** if it doesn't exist — it's managed by Codio
 - **Solution files** go in `.guides/secure/` (hidden from students)
 - **Commit to a branch**, not main, unless Bridget says otherwise

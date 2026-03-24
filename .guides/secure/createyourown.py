@@ -5,63 +5,64 @@ WIDTH = 800
 HEIGHT = 600
 
 score = 0
-alien_speed = 1
+predator_speed = 1
 
-player = Actor('knight')
-player.pos = (WIDTH // 2, HEIGHT // 2)
+# Ecosystem: ocean — fish avoids shark, collects plankton
+fish = Actor('fish')
+fish.pos = (WIDTH // 2, HEIGHT // 2)
 
-alien = Actor('dragon')
-alien.pos = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
+shark = Actor('shark')
+shark.pos = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
 
-cookie = Actor('gem')
-cookie.pos = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
+plankton = Actor('plankton')
+plankton.pos = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
 
 
 def update():
-    global score, alien_speed
+    global score, predator_speed
 
-    # Player movement
+    # Creature movement
     if keyboard.left:
-        player.x -= 5
+        fish.x -= 5
     if keyboard.right:
-        player.x += 5
+        fish.x += 5
     if keyboard.up:
-        player.y -= 5
+        fish.y -= 5
     if keyboard.down:
-        player.y += 5
+        fish.y += 5
 
-    # Keep player on screen
-    player.x = max(0, min(WIDTH, player.x))
-    player.y = max(0, min(HEIGHT, player.y))
+    # Keep creature on screen
+    fish.x = max(0, min(WIDTH, fish.x))
+    fish.y = max(0, min(HEIGHT, fish.y))
 
-    # Alien chases the player
-    if player.x > alien.x:
-        alien.x += alien_speed
-    elif player.x < alien.x:
-        alien.x -= alien_speed
-    if player.y > alien.y:
-        alien.y += alien_speed
-    elif player.y < alien.y:
-        alien.y -= alien_speed
+    # Predator chases the creature
+    if fish.x > shark.x:
+        shark.x += predator_speed
+    elif fish.x < shark.x:
+        shark.x -= predator_speed
+    if fish.y > shark.y:
+        shark.y += predator_speed
+    elif fish.y < shark.y:
+        shark.y -= predator_speed
 
-    # Collision with cookie — move to new random position
-    if player.colliderect(cookie):
+    # Collision with resource — move to new random position
+    if fish.colliderect(plankton):
         score += 1
-        cookie.pos = (random.randint(50, WIDTH - 50), random.randint(50, HEIGHT - 50))
-        alien_speed += 0.5
+        plankton.pos = (random.randint(50, WIDTH - 50), random.randint(50, HEIGHT - 50))
+        predator_speed += 0.5
         print("Score: " + str(score))
 
-    # Collision with alien — game over
-    if player.colliderect(alien):
+    # Collision with predator — game over
+    if fish.colliderect(shark):
         print("Game Over! Final Score: " + str(score))
         exit()
 
 
 def draw():
     screen.fill((0, 0, 0))
-    player.draw()
-    alien.draw()
-    cookie.draw()
+    fish.draw()
+    shark.draw()
+    plankton.draw()
     screen.draw.text("Score: " + str(score), topleft=(10, 10), fontsize=30)
 
 

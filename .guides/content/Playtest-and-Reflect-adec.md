@@ -19,10 +19,11 @@ Make at least one change based on your playtest feedback.
 
 **What makes a game *a game*?**
 
-> 📹 [RIOT VIDEO: Episode 10 — Game Design (from "So You Wanna Make Games??" playlist)]
-> *Embed from: https://www.youtube.com/playlist?list=PL42m9XiTqPHJdJuVXO6Vf5ta5D07peiVx*
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yYYtBFSxoCg?si=EVlHbw2fuWX7Zzpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Your collision game has a player, an enemy, and a collectible — the basic building blocks of a game. This video from Riot Games digs into how designers think about the mechanics that make games actually fun to play.
+
+{Check It!|assessment}(free-text-auto-883018576)
 
 ---
 

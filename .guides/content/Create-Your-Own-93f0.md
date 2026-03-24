@@ -1,6 +1,6 @@
 ## Create Your Own
 
-Build your own collision game in `tryit.py`.
+Build an **ecosystem survival game** in `tryit.py`. Pick any ecosystem — ocean, jungle, arctic, backyard, whatever you want — and create a game where a creature is trying to survive in it.
 
 ---
 
@@ -19,15 +19,15 @@ Build your own collision game in `tryit.py`.
 
 Build a game in `tryit.py` that:
 
-1. Has a **player** that moves with the keyboard
-2. Has **at least one enemy** that moves toward the player
-3. Has **at least one collectible** that moves to a new random position when collected
+1. Has a **creature** you control with the keyboard
+2. Has **at least one predator** that chases your creature
+3. Has **at least one resource** (food, shelter, etc.) that moves to a new random position when collected
 4. **Responds to collisions** — something happens when sprites overlap
-5. Uses **unique sprites**
+5. Uses **unique sprites** that fit your ecosystem
 
 {Check It!|assessment}(llm-based-auto-rubric-2683107751)
 
 
 ---
 
-Optional challenge: can you make the enemy speed increase over time?  What if there are multiple enemies?
+Optional challenge: can you make the predator speed up over time? What if there are multiple predators in your ecosystem?

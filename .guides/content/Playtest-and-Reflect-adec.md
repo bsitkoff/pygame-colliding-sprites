@@ -1,16 +1,31 @@
 ## Playtest and Reflect
 
-Swap with a neighbor and play each other's games.
+### Test Your Own Game
 
-**Give feedback on:**
+Run your game and try to break it. Work through this checklist:
+
+- Move into a corner — can you get stuck?
+- Hold two arrow keys at the same time — does your creature move diagonally?
+- Don't move at all — what does the predator do?
+- What happens if the resource respawns right on top of the predator?
+
+Now try to find **one more** edge case on your own. An edge case is something unusual a player might do that you didn't plan for.
+
+It's okay if you find something you don't know how to fix yet — that's normal. Just make a note of it and move on.
+
+{Check It!|assessment}(free-text-auto-2905301927)
+
+### Playtest a Peer's Game
+
+Find someone else at roughly the same pace. Play each other's games and give feedback:
+
 - Is it clear what you're supposed to do?
 - Does the collision feel right — fair? Too easy? Too hard?
-- What would make it more fun?
+- Did you find any bugs or edge cases?
 
 ---
-Make at least one change based on your playtest feedback.
 
-**Reflect on your own work:**
+Make at least one change based on your testing or your peer's feedback.
 
 {Check It!|assessment}(free-text-auto-2396586280)
 

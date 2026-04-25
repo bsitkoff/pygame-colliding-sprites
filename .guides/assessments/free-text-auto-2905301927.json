@@ -1,11 +1,11 @@
 {
 	"type": "free-text-auto",
-	"taskId": "free-text-auto-2396586280",
+	"taskId": "free-text-auto-2905301927",
 	"source": {
-		"name": "changes",
+		"name": "edge case",
 		"showName": false,
-		"instructions": "What did you find during testing or playtesting, and what did you change?",
-		"command": "python3 .guides/secure/freetext.py --question 'What did you find during testing or playtesting, and what did you change?' --use-llm",
+		"instructions": "What edge case did you find on your own? Describe what you tried and what happened.",
+		"command": "python3 .guides/secure/freetext.py --question 'What edge case did you find on your own? Describe what you tried and what happened.' --use-llm",
 		"timeoutSeconds": 40,
 		"metadata": {
 			"tags": [
